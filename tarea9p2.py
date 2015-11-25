@@ -33,7 +33,6 @@ def intervalo(datos):
     H = n.zeros(N_boot)
     for i in range(N_boot):
         s = n.random.randint(low=0, high=N, size=N)
-        #fake_datos = datos[s][s]
         distancia = datos[s, 1]
         vel = datos[s, 0]
         a1 = curve_fit(linea,distancia, vel)
